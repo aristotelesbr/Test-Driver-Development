@@ -7,6 +7,7 @@ class CalculadoraDeSalarioTest < Test::Unit::TestCase
     calculadora = CalculadoraDeSalario.new
     desenvolvedor = Funcionario.new('Ary', 1500.0,
       Cargo::DESENVOLVEDOR)
+
     salario = calculadora.calcula_salario (desenvolvedor)
     assert_equal 1500 * 0.9, salario
   end
