@@ -1,7 +1,14 @@
-module Cargo
-  DESENVOLVEDOR = 0
-  DBA = 1
-  TESTADOR = 2
+class Cargo
+  def initialize(regra)
+    @regra = regra
+  end
+
+  DESENVOLVEDOR = Cargo.new(DezOuVintePorcento.new)
+  DBA = Cargo.new(QuinzeOuVinteCincoPorCento.new)
+  TESTADOR = Cargo.new(QuinzeOuVinteCincoPorCento.new)
+
+  attr_reader :regra
+  private :initialize
 end
 
 class Funcionario
